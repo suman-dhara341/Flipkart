@@ -128,7 +128,12 @@ const login = async (req, res) => {
     );
 
     return res
-      .cookie("Token", token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 })
+      .cookie("Token", token, {
+        httpOnly: true,
+        maxAge: 24 * 60 * 60 * 1000,
+        secure: true, 
+        sameSite: "None",
+      })
       .status(200)
       .json({
         message: `Welcome to ${userFind.fullName}`,
