@@ -15,9 +15,12 @@ const app = express();
 const PORT = process.env.PORT || 6000;
 
 const corsOptions = {
-  origin: "https://flipkart-orcin-iota.vercel.app",
+  origin: [
+    "https://flipkart-orcin-iota.vercel.app",
+    "https://flipkart-nine-delta.vercel.app",
+  ],
   credentials: true,
-  optionSuccessStatus: 200,
+  optionsSuccessStatus: 200,
 };
 
 // middleware
