@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 6000;
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://flipkart-orcin-iota.vercel.app",
   credentials: true,
   optionSuccessStatus: 200,
 };
