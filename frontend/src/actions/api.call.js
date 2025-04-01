@@ -94,7 +94,7 @@ export const login = (payload) => {
 
 export const logout = () => {
   return api
-    .get("/auth//logout")
+    .get("/auth/logout")
     .then((response) => response)
     .catch((err) => err);
 };
